@@ -1,5 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+/*
+ * @lc app=leetcode.cn id=104 lang=cpp
+ *
+ * [104] 二叉树的最大深度
+ */
+
+// @lc code=start
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -19,3 +28,4 @@ class Solution {
         return 1 + max(maxDepth(root->left), maxDepth(root->right));
     }
 };
+// @lc code=end

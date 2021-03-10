@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+/*
+ * @lc app=leetcode.cn id=4 lang=cpp
+ *
+ * [4] 寻找两个正序数组的中位数
+ */
+
+// @lc code=start
 class Solution {
+  public:
   public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
         int mn = nums1.size() + nums2.size();
@@ -39,3 +47,4 @@ class Solution {
         }
     }
 };
+// @lc code=end

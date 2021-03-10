@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-//  Definition for a binary tree node.
+
+/*
+ * @lc app=leetcode.cn id=100 lang=cpp
+ *
+ * [100] 相同的树
+ */
+
+// @lc code=start
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -12,19 +20,13 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right)
         : val(x), left(left), right(right) {}
 };
+
 class Solution {
   public:
-    void inorder(TreeNode *root, vector<int> &res) {
-        if (!root) {
-            return;
-        }
-        inorder(root->left, res);
-        res.push_back(root->val);
-        inorder(root->right, res);
-    }
-    vector<int> inorderTraversal(TreeNode *root) {
-        vector<int> res;
-        inorder(root, res);
-        return res;
+    bool isSameTree(TreeNode *p, TreeNode *q) {
+        if (!p && !q) return true;
+        if ((!p && q) || (p && !q) || (p->val != q->val)) return false; //val judge after pq
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 };
+// @lc code=end

@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-// Definition for a binary tree node.
+
+/*
+ * @lc app=leetcode.cn id=95 lang=cpp
+ *
+ * [95] 不同的二叉搜索树 II
+ */
+
+// @lc code=start
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -14,6 +22,7 @@ struct TreeNode {
 };
 
 class Solution {
+  public:
   public:
     vector<TreeNode *> generate(int beg, int end) {
         vector<TreeNode *> res;
@@ -39,3 +48,4 @@ class Solution {
         return generate(0, n - 1);
     }
 };
+// @lc code=end

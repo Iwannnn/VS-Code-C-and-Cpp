@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-//Definition for a binary tree node.
+
+/*
+ * @lc app=leetcode.cn id=98 lang=cpp
+ *
+ * [98] 验证二叉搜索树
+ */
+
+// @lc code=start
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -12,6 +20,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right)
         : val(x), left(left), right(right) {}
 };
+
 class Solution {
   public:
     bool isValidBST(TreeNode *root) {
@@ -23,3 +32,4 @@ class Solution {
         return judge(root->left, min, root->val) && judge(root->right, root->val, max);
     }
 };
+// @lc code=end

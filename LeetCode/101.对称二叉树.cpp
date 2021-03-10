@@ -1,5 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+/*
+ * @lc app=leetcode.cn id=101 lang=cpp
+ *
+ * [101] 对称二叉树
+ */
+
+// @lc code=start
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -28,3 +37,4 @@ class Solution {
         return isSymmetric(left->left, right->right) && isSymmetric(left->right, right->left);
     }
 };
+// @lc code=end

@@ -1,5 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+/*
+ * @lc app=leetcode.cn id=109 lang=cpp
+ *
+ * [109] 有序链表转换二叉搜索树
+ */
+
+// @lc code=start
+
 struct ListNode {
     int val;
     ListNode *next;
@@ -10,6 +19,7 @@ struct ListNode {
     ListNode(int x, ListNode *next)
         : val(x), next(next) {}
 };
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -21,6 +31,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right)
         : val(x), left(left), right(right) {}
 };
+
 class Solution {
   public:
     TreeNode *sortedListToBST(ListNode *head) {
@@ -37,6 +48,6 @@ class Solution {
         TreeNode *root = new TreeNode(slow->val);
         if (slow != head) root->left = sortedListToBST(head);
         root->right = sortedListToBST(fast);
-        return root;
     }
 };
+// @lc code=end
