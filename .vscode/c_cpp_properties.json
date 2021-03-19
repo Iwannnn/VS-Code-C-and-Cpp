@@ -4,20 +4,20 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
-                "C:/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
-                "C:/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
-                "C:/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-                "C:/LLVM/include",
-                "C:/LLVM/x86_64-w64-mingw32/include",
-                "C:/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"
+                "E:/env/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                "E:/env/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+                "E:/env/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+                "E:/env/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                "E:/env/LLVM/include",
+                "E:/env/LLVM/x86_64-w64-mingw32/include",
+                "E:/env/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\mingw64\\bin\\g++.exe",
+            "compilerPath": "E:\\env\\mingw64\\bin\\g++.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "gcc-x64"
