@@ -77,5 +77,6 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
-    }
+    },
+    "editor.formatOnSave": true
 }
