@@ -15,12 +15,12 @@ class Solution {
         int res = 0, t = 0;
         for (int i = 0; i < height.size(); i++) {
             dp[i] = t;
-            t = max(t, height[i]);
+            t = max(t, height[i]); //从左往又看最高
         }
         t = 0;
         for (int i = height.size() - 1; i >= 0; i--) {
-            dp[i] = min(t, dp[i]);
-            t = max(t, height[i]);
+            dp[i] = min(t, dp[i]); //两边的高去小的就是这一个位置能存水的量
+            t = max(t, height[i]); //从右往左看最高
             if (dp[i] > height[i]) {
                 res += dp[i] - height[i];
             }
