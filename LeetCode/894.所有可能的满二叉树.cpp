@@ -27,14 +27,6 @@ class Solution {
     }
 
     vector<TreeNode *> search(int n) {
-        // if (n % 2 == 0) return;
-        // if (n == 1) {
-        //     out.left = 0;
-        //     res.push_back(out);
-        // }
-        // for (int i = 1; i < n; i += 2) {
-        //     vector<TreeNode *> left = search(i, res);
-        // }
         if (n == 1) return {new TreeNode(0)};
         vector<TreeNode *> res;
         for (int i = 1; i < n; i += 2) {
