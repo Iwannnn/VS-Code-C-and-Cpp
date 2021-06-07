@@ -39,6 +39,7 @@ int main() {
             break;
         }
     }
+    sort(weight.begin(), weight.end());
     traceback(weight, capacity, out, res);
     for (int i = 0; i < res.size(); ++i) {
         for (int j = 0; j < res[i].size(); ++j) {
