@@ -90,5 +90,6 @@ int main() {
     }
     cout << endl;
     cout << "最优装载重量为：" << bestw << endl;
+    system("pause");
     return 0;
 }

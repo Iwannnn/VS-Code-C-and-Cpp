@@ -54,5 +54,5 @@ int main() {
         cout << "无解";
     else
         cout << "装入第二个有解";
-    getchar();
+    system("pause");
 }

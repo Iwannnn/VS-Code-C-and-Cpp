@@ -47,23 +47,23 @@ class ShortPath {
     // 求最短路径
     void getShortestPath() {
         vector<Path> path(nodeCount);
-        priority_queue<Node, vector<Node>> min_heap;
-        min_heap.push(Node(0, 0)); // 将起始结点入队
+        priority_queue<Node, vector<Node>> minHeap;
+        minHeap.push(Node(0, 0)); // 将起始结点入队
 
         while (true) {
-            Node top = min_heap.top(); // 取出最大值
-            min_heap.pop();
+            Node top = minHeap.top(); // 取出最大值
+            minHeap.pop();
             if (top.index == endNode) {
                 break;
             }
             for (int i = 0; i < nodeCount; ++i) {
                 if (graph[top.index][i] != noEgde && (top.weight + graph[top.index][i]) < path[i].weight) {
-                    min_heap.push(Node(i, top.weight + graph[top.index][i]));
+                    minHeap.push(Node(i, top.weight + graph[top.index][i]));
                     path[i].frontIndex = top.index;
                     path[i].weight = top.weight + graph[top.index][i];
                 }
             }
-            if (min_heap.empty()) {
+            if (minHeap.empty()) {
                 break;
             }
         }

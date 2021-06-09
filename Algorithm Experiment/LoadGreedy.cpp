@@ -45,7 +45,7 @@ int main() {
     cin >> c;
     int x[200], w[200];
     for (int i = 0; i < n; ++i) {
-        cout << "请输入第" << i << "个物品重量";
+        cout << "请输入第" << i << "个物品重量: ";
         cin >> w[i];
     }
     int *t = new int[n];
@@ -55,6 +55,7 @@ int main() {
     loading(x, w, c, n, t);
     cout << "装入物品编号为";
     for (int k = 0; k < n; ++k) {
-        if (x[k] == 1) cout << t[k] + 1 << " ";
+        if (x[k] == 1) cout << t[k] << " ";
     }
+    system("pause");
 }
