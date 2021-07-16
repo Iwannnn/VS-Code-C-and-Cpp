@@ -16,7 +16,7 @@ void show(int win_num) {
         else
             r++;
 
-        if ((l >= win_num || r >= win_num) && (abs(l - r) > = 2)) {
+        if ((l >= win_num || r >= win_num) && (abs(l - r) >= 2)) {
             cout << l << ":" << r << endl;
             l = 0, r = 0;
         }
